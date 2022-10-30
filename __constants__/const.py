@@ -24,7 +24,7 @@ options.add_argument('--log-level=3')
 
 try:
     if path.exists('./webdriver/geckodriver'):
-        driver = webdriver.Firefox(options = options, executable_path=r'./webdriver/geckodriver')          
+        driver = webdriver.Firefox(options=options, executable_path=r'./webdriver/geckodriver')
     else:
         raise Exception('Driver not found .. Run Setup.py first')
 except Exception as e:
