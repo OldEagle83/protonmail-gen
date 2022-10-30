@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 
 from datetime import datetime
-from __constants__.const import url, username, password, confirm_pass, email, api, options,driver
+from __constants__.const import url, username, password, confirm_pass, email, api, options, driver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
