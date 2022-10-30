@@ -18,7 +18,7 @@ from io import BytesIO
 import tarfile
 try:
     from clint.textui import progress
-except ImportError:
+except ModuleNotFoundError:
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'clint'])
 finally:
     from clint.textui import progress
