@@ -22,18 +22,18 @@ def scroll_click_element(driver, xpath):
                             (By.XPATH, xpath)))
 
     driver.execute_script("arguments[0].scrollIntoView(true);", scroll_element)
-    driver.find_element_by_xpath(xpath).click()
+    driver.find_element(By.XPATH, xpath).click()
     time.sleep(0.4)
 
 def switch_frame(driver, tag_name=None, class_name=None):
     if tag_name:
         WebDriverWait(driver, 60).until(EC.visibility_of_element_located(
             (By.TAG_NAME, tag_name)))
-        driver.switch_to.frame(driver.find_element_by_tag_name(tag_name))
+        driver.switch_to.frame(driver.find_element(By.TAG_NAME, tag_name))
     else:
         WebDriverWait(driver, 60).until(EC.visibility_of_element_located(
             (By.CLASS_NAME, class_name)))
-        driver.switch_to.frame(driver.find_element_by_class_name(class_name))
+        driver.switch_to.frame(driver.find_element(By.CLASS_NAME, class_name))
     time.sleep(.5)
 
 def click_element(driver, xpath):
@@ -41,5 +41,5 @@ def click_element(driver, xpath):
     WebDriverWait(driver, 60).until(EC.presence_of_element_located(
         (By.XPATH, xpath)))
 
-    driver.find_element_by_xpath(xpath).click()   
+    driver.find_element(By.XPATH, xpath).click()
     time.sleep(.5)
